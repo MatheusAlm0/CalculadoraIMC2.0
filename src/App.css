@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column; 
+}
+
+.App {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box; 
+  margin: 0 auto; 
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #00c6ff;
   color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #007ac7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* NOVO BLOCO ADICIONADO */
+.mensagem-box {
+  background-color: #f8fbff;
+  border: 1px solid #cce7ff;
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  text-align: left;
+  color: #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.mensagem-box:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 600px) {
+  .App {
+    padding: 1.5rem; 
+    max-width: 90%; 
+    margin: 0 auto; 
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 1.5rem; 
+  }
+
+  input, button {
+    font-size: 0.9rem; 
+    padding: 0.6rem; 
+  }
+
+  button {
+    font-size: 1rem; 
+  }
+
+  p {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    padding: 1rem;
+    max-width: 90%;
+    margin: 0 auto; 
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input, button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }
